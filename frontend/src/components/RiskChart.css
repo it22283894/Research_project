@@ -1,0 +1,99 @@
+.risk-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.risk-chart.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: #999;
+}
+
+.chart-container {
+    height: 250px;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.risk-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.risk-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.disease-name {
+    min-width: 140px;
+    font-weight: 500;
+    color: #333;
+}
+
+.risk-bar-container {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.risk-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.risk-bar.low {
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+}
+
+.risk-bar.moderate {
+    background: linear-gradient(90deg, #ff9800, #ffc107);
+}
+
+.risk-bar.high {
+    background: linear-gradient(90deg, #f44336, #ff5722);
+}
+
+.risk-value {
+    min-width: 50px;
+    text-align: right;
+    font-weight: 600;
+    color: #333;
+}
+
+.risk-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.risk-badge.low {
+    background: rgba(76, 175, 80, 0.15);
+    color: #4caf50;
+}
+
+.risk-badge.moderate {
+    background: rgba(255, 152, 0, 0.15);
+    color: #ff9800;
+}
+
+.risk-badge.high {
+    background: rgba(244, 67, 54, 0.15);
+    color: #f44336;
+}

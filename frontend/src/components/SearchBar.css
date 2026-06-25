@@ -1,0 +1,306 @@
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Mode Toggle */
+.mode-toggle {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.mode-btn {
+    background: rgba(13, 56, 148, 0.08);
+    color: var(--text-light);
+    border: 2px solid transparent;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.mode-btn:hover {
+    background: rgba(13, 148, 136, 0.15);
+    color: var(--primary);
+}
+
+.mode-btn.active {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(78, 212, 201, 0.3);
+}
+
+/* Search Form */
+.search-form {
+    width: 100%;
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 60px;
+    padding: 0.35rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow);
+}
+
+.search-input-container:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15), var(--shadow-lg);
+}
+
+.search-icon {
+    padding: 0 1rem;
+    font-size: 1.35rem;
+    color: var(--text-muted);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.05rem;
+    padding: 0.85rem 0;
+    background: transparent;
+    color: #000000;
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Quantity Form Styles */
+.quantity-form {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--border);
+}
+
+.ingredients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.ingredient-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    background: rgba(13, 148, 136, 0.03);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.ingredient-row:hover {
+    border-color: var(--primary);
+    background: rgba(13, 148, 136, 0.06);
+}
+
+.ingredient-name-input {
+    flex: 2;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    color: #000000;
+}
+
+.ingredient-name-input:focus {
+    border-color: var(--primary);
+}
+
+.ingredient-amount-input {
+    width: 80px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 0.6rem;
+    font-size: 0.95rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s ease;
+    color: #000000;
+}
+
+.ingredient-amount-input:focus {
+    border-color: var(--primary);
+}
+
+.ingredient-unit-select {
+    width: 85px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 0.4rem;
+    font-size: 0.9rem;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+    color: #000000;
+}
+
+.ingredient-unit-select:focus {
+    border-color: var(--primary);
+}
+
+.remove-ingredient-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-ingredient-btn:hover:not(:disabled) {
+    background: #dc3545;
+    color: white;
+}
+
+.quantity-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add-ingredient-btn {
+    background: rgba(13, 148, 136, 0.1);
+    color: var(--primary);
+    border: 2px dashed var(--primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.add-ingredient-btn:hover:not(:disabled) {
+    background: var(--primary);
+    color: white;
+    border-style: solid;
+}
+
+/* Search Button */
+.search-button {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    border: none;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.search-button:hover:not(:disabled) {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(13, 148, 136, 0.35);
+}
+
+.search-button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.search-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Quick Search */
+.quick-search {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quick-label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.quick-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.quick-button {
+    background: rgba(13, 148, 136, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(13, 148, 136, 0.25);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.quick-button:hover:not(:disabled) {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
+}
+
+.quick-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .ingredient-row {
+        flex-wrap: wrap;
+    }
+
+    .ingredient-name-input {
+        flex: 1 1 100%;
+    }
+
+    .ingredient-amount-input,
+    .ingredient-unit-select {
+        flex: 1;
+    }
+
+    .quantity-actions {
+        flex-direction: column;
+    }
+
+    .search-button,
+    .add-ingredient-btn {
+        width: 100%;
+    }
+}

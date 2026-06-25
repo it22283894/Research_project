@@ -1,0 +1,113 @@
+# ==========================
+# Large Data & Datasets
+# ==========================
+#data/
+#datasets/
+#raw_data/
+#processed_data/
+food_images/
+*.csv
+*.tsv
+*.json
+*.jsonl
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.zip
+*.tar.gz
+*.gz
+*.7z
+*.rar
+
+# But allow small sample data (optional)
+!data/sample/
+!data/samples/
+!data/example.csv
+
+# ==========================
+# Python & Environment
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+htmlcov/
+.tox/
+.nox/
+.python-version
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# ML Experiments
+wandb/
+mlruns/
+runs/
+models/
+*.pth
+*.pt
+*.h5
+*.keras
+*.joblib
+checkpoints/
+
+# Neo4j / Graph DB (if you use local instance)
+graph.db/
+*.db/
+
+# Logs & Temp
+logs/
+*.log
+temp/
+tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build & Dist
+dist/
+build/
+*.egg-info/
+
+# DVC pointers – always track these (small files)
+*.dvc
+.dvc/
+
+.dvc/cache/
+data/processed/kg/*.csv  # ignore big triples CSVs
+
+
+# Big data files – ignore
+data/processed/kg/*.csv
+data/raw/**/*
+
+#frontend
+frontend/node_modules
+node_modules
