@@ -111,3 +111,6 @@ data/raw/**/*
 #frontend
 frontend/node_modules
 node_modules
+
+# Allow package.json files for frontend
+!frontend/package.json
